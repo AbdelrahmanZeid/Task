@@ -13,9 +13,9 @@ class UpperBodySection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(
         top: AppPadding.p12,
-        right: 20,
+        right: AppPadding.p20,
         bottom: AppPadding.p8,
-        left: 20,
+        left: AppSize.s20,
       ),
       width: 380,
       height: 171,
