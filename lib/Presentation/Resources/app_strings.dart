@@ -3,7 +3,7 @@ class AppStrings {
   static const String home = 'Home';
   static const String title = 'Multi-Services for Your Real Estate Needs';
   static const String subTitle =
-      'Explore diverse real estate services for all your needs:\n property management,construction,insurance and \n more in one place';
+      'Explore diverse real estate services for all your needs:\nproperty management,construction,insurance and \nmore in one place';
   static const String orderButtonText = 'Order';
 
   static const String heyAhmed = 'Hey,Ahmed';
