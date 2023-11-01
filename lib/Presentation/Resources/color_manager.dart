@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // all color of app
 class ColorManager {
   static Color appBarColor = const Color(0xffffffff);
+
+  
   static Color menuItemColor = const Color(0xff101010);
   static Color mainColor = const Color(0xffD61116);
   static Color searchIconColor = const Color(0xff8C8C8C);

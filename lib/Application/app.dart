@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/Presentation/Dashboard/dashboard_view.dart';
+import 'package:task/Presentation/Resources/theme_manager.dart';
 
 // Entery point
 class AppTask extends StatelessWidget {
@@ -10,7 +11,7 @@ class AppTask extends StatelessWidget {
     return MaterialApp(
       home:const DashBoardView(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
+      theme:getAppTheme(),
     );
   }
 }
