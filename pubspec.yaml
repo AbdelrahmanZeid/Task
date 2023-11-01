@@ -58,10 +58,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-   
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -78,11 +78,10 @@ flutter:
     - family: Outfit
       fonts:
         - asset: assets/fonts/Outfit-Light.ttf
-        - asset: assets/fonts/Outfit-SemiBold.ttf
         - asset: assets/fonts/Outfit-Regular.ttf
-        - asset: fonts/Schyler-Italic.ttf
-          style: italic
-   
+        - asset: assets/fonts/Outfit-SemiBold.ttf
+       
+    
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
