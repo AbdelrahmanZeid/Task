@@ -72,14 +72,10 @@ class UpperBodySection extends StatelessWidget {
                       top: AppPadding.p3,
                       left: AppPadding.p3,
                     ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                    child: Icon(
                         Icons.search,
-                        size: AppSize.s17,
                         color: ColorManager.searchIconColor,
                       ),
-                    ),
                   ),
                 ),
               ],

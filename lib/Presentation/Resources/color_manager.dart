@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 class ColorManager {
   static Color appBarColor = const Color(0xffffffff);
 
+  static const Color midSectionColor=Color(0xffFFF5F5);
+
   
   static Color menuItemColor = const Color(0xff101010);
   static Color mainColor = const Color(0xffD61116);

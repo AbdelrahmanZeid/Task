@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task/Presentation/Dashboard/dashboard_view.dart';
-import 'package:task/Presentation/Resources/theme_manager.dart';
+ import 'package:task/Presentation/Resources/theme_manager.dart';
+
+import '../Presentation/Dashboard/dashboard_view.dart';
 
 // Entery point
 class AppTask extends StatelessWidget {

@@ -8,12 +8,14 @@ ThemeData getAppTheme() => ThemeData(
       fontFamily: 'Outfit',
       // add app bar theme
       appBarTheme: AppBarTheme(
+        centerTitle: true,
         elevation: appBarElevation,
         backgroundColor: ColorManager.appBarColor,
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.dark,
           statusBarBrightness: Brightness.light,
           statusBarColor: ColorManager.appBarColor,
+        
         ),
       ),
     );
