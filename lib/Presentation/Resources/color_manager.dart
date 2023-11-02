@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 class ColorManager {
   static Color appBarColor = const Color(0xffffffff);
 
-  static const Color midSectionColor=Color(0xffFFF5F5);
-  static const Color orderColor=Color(0xffFafafa);
+  static const Color midSectionColor = Color(0xffFFF5F5);
+  static const Color orderColor = Color(0xffFafafa);
 
-  
   static Color menuItemColor = const Color(0xff101010);
   static Color mainColor = const Color(0xffD61116);
   static Color searchIconColor = const Color(0xff8C8C8C);
@@ -19,4 +18,5 @@ class ColorManager {
   static Color seeAllColor = const Color(0xff8C8C8C);
   static Color unActiveNavBar = const Color(0xffC4C4C4);
   static Color middleFrameColor = const Color(0xffFFF5F5);
+  static Color noTitleFound = const Color(0xff2e2e2e);
 }
