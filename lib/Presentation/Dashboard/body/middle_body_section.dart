@@ -52,7 +52,10 @@ class MiddelBodySection extends StatelessWidget {
                               btnTextColor: ColorManager.appBarColor,
                               btnText: AppStrings.orderButtonText,
                               btnColor: ColorManager.mainColor,
-                              onPressed: () {},
+                              btnWidth: 128,
+                              btnHeight: 32,
+                              textFontSize: AppPadding.p14,
+                              textFontWeight: FontWeightManager.bold,
                             ),
                           ),
                           const Spacer(),
@@ -80,7 +83,6 @@ class MiddelBodySection extends StatelessWidget {
                   Image.asset(
                     AssetsManager.ellipse,
                   ),
-                  
                   Image.asset(
                     AssetsManager.rectangle,
                   ),
