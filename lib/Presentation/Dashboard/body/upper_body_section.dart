@@ -18,7 +18,7 @@ class UpperBodySection extends StatelessWidget {
         left: AppSize.s20,
       ),
       width: 380,
-      height: 171,
+      height: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           AppSize.s8,
@@ -73,9 +73,11 @@ class UpperBodySection extends StatelessWidget {
                       left: AppPadding.p3,
                     ),
                     child: Icon(
-                        Icons.search,
-                        color: ColorManager.searchIconColor,
+                      Icons.search,
+                      color: ColorManager.searchIconColor.withOpacity(
+                        .05,
                       ),
+                    ),
                   ),
                 ),
               ],

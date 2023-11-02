@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:task/presentation/custom_widgets/custom_button.dart';
+import 'package:task/presentation/dashboard/body/middle_body_section.dart';
 import 'package:task/presentation/dashboard/body/upper_body_section.dart';
 import 'package:task/presentation/resources/app_strings.dart';
-import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
-import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
 
 class CustomBody extends StatelessWidget {
@@ -13,115 +13,98 @@ class CustomBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SizedBox(
-          height: AppSize.s16,
-        ),
         UpperBodySection(),
         SizedBox(
           height: AppSize.s10,
         ),
         MiddelBodySection(),
+         SizedBox(
+          height: AppSize.s4,
+        ),
+       // LowerBodySection(),
       ],
     );
   }
 }
 
-class MiddelBodySection extends StatelessWidget {
-  const MiddelBodySection({super.key});
+class LowerBodySection extends StatelessWidget {
+  const LowerBodySection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      color: ColorManager.appBarColor,
       padding: const EdgeInsets.symmetric(
-        horizontal: AppSize.s20,
+        vertical: AppPadding.p4,
+        horizontal: AppPadding.p16,
       ),
-      child: Container(
-        width: 380,
-        height: 170,
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(
-                  AppSize.s8,
-                ),
-                color: ColorManager.midSectionColor,
-              ),
-              height: 152,
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 183,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        left: AppPadding.p3,
-                      ),
-                      child: Column(
-                        children: [
-                          const Spacer(),
-                          const Text(
-                            AppStrings.title,
-                            style: TextStyle(
-                              fontSize: AppSize.s16,
-                              fontWeight: FontWeightManager.semiBold,
-                            ),
-                          ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: CustomButton(
-                              btnTextColor: ColorManager.appBarColor,
-                              btnText: AppStrings.orderButtonText,
-                              btnColor: ColorManager.mainColor,
-                              onPressed: () {},
-                            ),
-                          ),
-                          const Spacer(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Image.asset(
-                    AssetsManager.manPresentation,
-                    width: 144,
-                    height: 144,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+      width: double.infinity,
+      height: 310,
+      child: ListView(
+        children: [
+          CustomTabBar(),
+        ],
       ),
     );
   }
 }
 
-class CustomButton extends StatelessWidget {
-  const CustomButton(
-      {super.key,
-      required this.btnTextColor,
-      required this.btnText,
-      required this.btnColor,
-      required this.onPressed});
-  final Color btnTextColor;
-  final String btnText;
-  final Color btnColor;
-  final VoidCallback onPressed;
+class CustomTabBar extends StatefulWidget {
+  const CustomTabBar({super.key});
+
+  @override
+  State<CustomTabBar> createState() => _CustomTabBarState();
+}
+
+class _CustomTabBarState extends State<CustomTabBar> {
+  // final tabController = TabController(
+  //   length: 3,
+  //   vsync: AnimatedListState(),
+  // );
+  @override
+ 
+
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: btnColor,
-        minimumSize: const Size(128, 32),
-        shape: RoundedRectangleBorder(
+    return Padding(
+      padding: const EdgeInsets.all(
+        AppPadding.p8,
+      ),
+      child: Container(
+        width: 335,
+        height: 48,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: ColorManager.categoryColorOne,
+          ),
           borderRadius: BorderRadius.circular(
-            360,
+            AppSize.s12,
           ),
         ),
-      ),
-      onPressed: onPressed,
-      child: Text(
-        btnText,
-        style: TextStyle(color: btnTextColor),
+        child: TabBar(
+         // controller: tabController,
+          tabs: [
+            CustomButton(
+              btnTextColor: ColorManager.appBarColor,
+              btnText: AppStrings.orderButtonText,
+              btnColor: ColorManager.mainColor,
+              onPressed: () {},
+            ),
+            CustomButton(
+              btnTextColor: ColorManager.appBarColor,
+              btnText: AppStrings.orderButtonText,
+              btnColor: ColorManager.mainColor,
+              onPressed: () {},
+            ),
+            CustomButton(
+              btnTextColor: ColorManager.appBarColor,
+              btnText: AppStrings.orderButtonText,
+              btnColor: ColorManager.mainColor,
+              onPressed: () {},
+            ),
+          ],
+          onTap: (value) {},
+        ),
       ),
     );
   }

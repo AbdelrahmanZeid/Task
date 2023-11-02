@@ -8,6 +8,8 @@ class AssetsManager{
  static const String manImage='$baseImagePath/Man Image.png';
  static const String emptyState='$baseImagePath/EmptyState.png';
  static const String rightArrow='$baseImagePath/arrow_right_alt.png';
+ static const String rectangle='$baseImagePath/Rectangle 508.png';
+ static const String ellipse ='$baseImagePath/Ellipse 76.png';
 
   //category view images
   static const String construction='$baseImagePath/1.png';

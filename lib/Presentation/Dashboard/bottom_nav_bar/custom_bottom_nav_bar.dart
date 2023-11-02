@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-   import 'package:task/presentation/Resources/color_manager.dart';
- import 'package:task/presentation/Resources/values_manager.dart';
 import 'package:task/presentation/dashboard/bottom_nav_bar/nav_bar_slots.dart';
-
+import 'package:task/presentation/resources/color_manager.dart';
+import 'package:task/presentation/resources/values_manager.dart';
+  
+  
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:const EdgeInsets.only(top: AppPadding.p6),
+      padding:const EdgeInsets.only(top: AppPadding.p8),
       width: double.infinity,
       height: 60,
       decoration: BoxDecoration(

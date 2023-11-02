@@ -1,10 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:task/presentation/Resources/app_strings.dart';
-import 'package:task/presentation/Resources/assets_manager.dart';
-import 'package:task/presentation/Resources/color_manager.dart';
-import 'package:task/presentation/Resources/font_manager.dart';
-import 'package:task/presentation/Resources/values_manager.dart';
+import 'package:task/presentation/resources/app_strings.dart';
+import 'package:task/presentation/resources/assets_manager.dart';
+import 'package:task/presentation/resources/color_manager.dart';
+import 'package:task/presentation/resources/font_manager.dart';
+import 'package:task/presentation/resources/values_manager.dart';
+
 
 List<Widget> navBarSlotList = [
   NavBarSlot(
