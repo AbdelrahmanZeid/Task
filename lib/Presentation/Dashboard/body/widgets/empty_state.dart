@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/presentation/resources/app_strings.dart';
 import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
+import 'package:task/presentation/resources/constants.dart';
 import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
 //create an empty state 
@@ -11,13 +12,13 @@ class EmptyState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 296,
+      height: getHeight(context)*.25,
       child: Column(
         children: [
           Image.asset(
             AssetsManager.emptyState,
-            width: 250,
-            height: 120,
+            width: getWidth(context)*.6,
+            height: getHeight(context)*.25,
           ),
           const SizedBox(
             height: AppSize.s4,
