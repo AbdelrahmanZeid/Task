@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:task/application/services/get_user_service.dart';
 import 'package:task/presentation/dashboard/body/widgets/category_selection.dart';
 import 'package:task/presentation/resources/app_strings.dart';
-import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
 import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
 
-class Categories extends StatelessWidget {
+class Categories extends StatefulWidget {
   const Categories({super.key});
 
   @override
+  State<Categories> createState() => _CategoriesState();
+}
+
+class _CategoriesState extends State<Categories> {
+  @override
+  Future<List<dynamic>> fetchData() async {
+    return await GetUserService().fetchData();
+  }
+
+  void initState() {
+    fetchData();
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -40,29 +54,26 @@ class Categories extends StatelessWidget {
           height: AppSize.s8,
         ),
         Expanded(
-          child: ListView(
-            children: const [
-              CategorySelection(
-                text: AppStrings.constructions,
-                image: AssetsManager.construction,
-              ),
-              CategorySelection(
-                text: AppStrings.insureance,
-                image: AssetsManager.insurance,
-              ),
-              CategorySelection(
-                text: AppStrings.legal,
-                image: AssetsManager.legal,
-              ),
-              CategorySelection(
-                text: AppStrings.buyAndSell,
-                image: AssetsManager.buyAndSell,
-              ),
-              CategorySelection(
-                text: AppStrings.accountingServices,
-                image: AssetsManager.accountingService,
-              ),
-            ],
+          child: FutureBuilder<List<dynamic>>(
+            future: fetchData(),
+            builder:
+                (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                  itemBuilder: (context, index) {
+                    return CategorySelection(
+                      name: snapshot.data![index]['name'],
+                      id: snapshot.data![index]['id'],
+                    );
+                  },
+                  itemCount: snapshot.data!.length,
+                );
+              } else {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            },
           ),
         ),
       ],

@@ -1,12 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:task/presentation/resources/assets_manager.dart';
+ import 'package:flutter/material.dart';
+ import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
+import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
+
 //create custom categoty selection
+
 class CategorySelection extends StatelessWidget {
-  const CategorySelection({super.key, required this.text, required this.image});
-  final String text;
-  final String image;
+ const CategorySelection({
+    super.key,
+    required this.name,
+    required this.id,
+  });
+  final String name;
+  final int id;
+
+  @override
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,17 +39,19 @@ class CategorySelection extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Image.asset(
-                image,
-                width: 24,
-                height: 24,
+              Text(
+                '${id}',
+                style: const TextStyle(
+                  fontSize: AppSize.s14,
+                  fontWeight: FontWeightManager.bold,
+                ),
               ),
               const SizedBox(
                 width: AppSize.s10,
               ),
               Text(
-                text,
-                style:const TextStyle(
+                name,
+                style: const TextStyle(
                   fontSize: AppSize.s16,
                 ),
               ),
