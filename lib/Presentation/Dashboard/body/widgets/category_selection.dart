@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
-
+//create custom categoty selection
 class CategorySelection extends StatelessWidget {
   const CategorySelection({super.key, required this.text, required this.image});
   final String text;

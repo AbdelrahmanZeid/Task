@@ -6,7 +6,7 @@ import 'package:task/presentation/dashboard/body/widgets/tab_bar_item.dart';
 import 'package:task/presentation/resources/app_strings.dart';
 import 'package:task/presentation/resources/color_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
-
+//lower section of app
 class LowerBodySection extends StatefulWidget {
   const LowerBodySection({super.key});
 

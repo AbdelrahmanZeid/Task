@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
-
+// create custom tab bar item
 class TabBarItem extends StatelessWidget {
   const TabBarItem(
       {super.key,

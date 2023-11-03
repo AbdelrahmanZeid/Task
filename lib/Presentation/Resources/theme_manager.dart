@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:task/Presentation/Resources/color_manager.dart';
 import 'package:task/presentation/resources/constants.dart';
-
+//control app theme
 ThemeData getAppTheme() => ThemeData(
       // add font family
       fontFamily: 'Outfit',

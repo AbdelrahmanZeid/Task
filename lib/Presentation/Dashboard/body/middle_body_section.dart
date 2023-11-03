@@ -5,7 +5,7 @@ import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
 import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
-
+//create middle section of app
 class MiddelBodySection extends StatelessWidget {
   const MiddelBodySection({super.key});
 

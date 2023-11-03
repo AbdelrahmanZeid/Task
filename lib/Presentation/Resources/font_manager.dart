@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+// every thing about fonts
 class FontConstants {
   static const String fontFamily = 'Outfit';
 }

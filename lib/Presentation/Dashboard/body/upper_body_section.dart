@@ -4,7 +4,7 @@ import 'package:task/Presentation/Resources/assets_manager.dart';
 import 'package:task/Presentation/Resources/color_manager.dart';
 import 'package:task/Presentation/Resources/font_manager.dart';
 import 'package:task/Presentation/Resources/values_manager.dart';
-
+// create upper section of app
 class UpperBodySection extends StatelessWidget {
   const UpperBodySection({super.key});
 
