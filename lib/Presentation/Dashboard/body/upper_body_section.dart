@@ -31,8 +31,7 @@ class UpperBodySection extends StatelessWidget {
             width: 335,
             height: 23,
             child: Row(
-              //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(
                     AppSize.s14,
@@ -75,7 +74,7 @@ class UpperBodySection extends StatelessWidget {
                     child: Icon(
                       Icons.search,
                       color: ColorManager.searchIconColor.withOpacity(
-                        .05,
+                        .02,
                       ),
                     ),
                   ),

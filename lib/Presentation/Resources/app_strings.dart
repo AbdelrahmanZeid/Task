@@ -12,7 +12,7 @@ class AppStrings {
   static const String ordersNumButtonText = 'Orders(0)';
   static const String noOrderFoundTitle = 'No order found';
   static const String noOrderFoundSubTitle =
-      'you can place your needed orders to let serve you.';
+      'you can place your needed orders\n to let serve you.';
 
   static const String assets = 'Assets';
   static const String support = 'Support';

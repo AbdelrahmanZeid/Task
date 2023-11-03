@@ -19,6 +19,7 @@ class EmptyState extends StatelessWidget {
             width: 250,
             height: 120,
           ),
+          const SizedBox(height: AppSize.s4,),
          Text(
 
             AppStrings.noOrderFoundTitle,

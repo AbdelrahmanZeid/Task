@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+ 
 import 'package:flutter/material.dart';
 import 'package:task/presentation/dashboard/body/widgets/categories.dart';
 import 'package:task/presentation/dashboard/body/widgets/empty_state.dart';
@@ -54,8 +53,7 @@ class _LowerBodySectionState extends State<LowerBodySection> {
                       setState(() {
                         
                       });
-                      print('$currentIndex');
-                    },
+                     },
                     indicator: const BoxDecoration(),
                     tabs: [
                       Tab(

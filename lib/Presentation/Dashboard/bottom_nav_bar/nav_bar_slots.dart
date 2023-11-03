@@ -1,11 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:task/presentation/resources/app_strings.dart';
 import 'package:task/presentation/resources/assets_manager.dart';
 import 'package:task/presentation/resources/color_manager.dart';
 import 'package:task/presentation/resources/font_manager.dart';
 import 'package:task/presentation/resources/values_manager.dart';
-
 
 List<Widget> navBarSlotList = [
   NavBarSlot(
@@ -14,22 +12,22 @@ List<Widget> navBarSlotList = [
     assetColor: ColorManager.mainColor,
     textColor: ColorManager.mainColor,
   ),
-   NavBarSlot(
+  NavBarSlot(
     assetName: AssetsManager.dashBoard,
     text: AppStrings.assets,
     assetColor: ColorManager.unActiveNavBar,
     textColor: ColorManager.unActiveNavBar,
   ),
-   NavBarSlot(
+  NavBarSlot(
     assetName: AssetsManager.supportAgent,
     text: AppStrings.support,
     assetColor: ColorManager.unActiveNavBar,
     textColor: ColorManager.unActiveNavBar,
   ),
-   NavBarSlot(
+  NavBarSlot(
     assetName: AssetsManager.person,
     text: AppStrings.profile,
-    assetColor:ColorManager.unActiveNavBar,
+    assetColor: ColorManager.unActiveNavBar,
     textColor: ColorManager.unActiveNavBar,
   ),
 ];
